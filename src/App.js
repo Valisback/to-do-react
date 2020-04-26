@@ -1,29 +1,21 @@
 import React, { Component } from "react";
+import ToDoItem from "./components/ToDoItem";
+import "./index.css";
+import NavBar from "./components/NavBar";
 
 class App extends Component {
   state = {
     nbItem: 6,
   };
-  render() {
-    return this.itemRender();
-  }
 
-  itemRender = () => {
+  render() {
     return (
-      <div>
-        <input type="checkbox" value="elem1" />
-        <span> 1st element </span>
-        <input type="checkbox" value="elem1" />
-        <span> 2nd element </span>
-        <input type="checkbox" value="elem1" />
-        <span> 3rd element </span>
-        <input type="checkbox" value="elem1" />
-        <span> 4th element </span>
-        <input type="checkbox" value="elem1" />
-        <span> 5th element </span>
-      </div>
+      <React.Fragment>
+        <NavBar />
+        <ToDoItem />;
+      </React.Fragment>
     );
-  };
+  }
 }
 
 export default App;
